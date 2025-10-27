@@ -37,11 +37,22 @@ body {
   margin: 0;
   color: var(--txt);
   font-family: var(--font-body);
-  background:
-    radial-gradient(60% 80% at 20% 10%, rgba(0, 216, 240, 0.12), transparent 70%),
-    radial-gradient(60% 80% at 80% 10%, rgba(179, 92, 255, 0.1), transparent 70%),
-    var(--bg);
+  background-color: var(--bg);
+  background-image:
+    url('/pattern-dark.svg'),
+    radial-gradient(60% 80% at 20% 10%, rgba(0, 216, 240, 0.14), transparent 70%),
+    radial-gradient(60% 80% at 80% 10%, rgba(179, 92, 255, 0.12), transparent 70%);
+  background-size: 320px 320px, 100% 100%, 100% 100%;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed;
   transition: background 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="light"] body {
+  background-image:
+    url('/pattern-light.svg'),
+    radial-gradient(60% 80% at 20% 10%, rgba(8, 168, 190, 0.14), transparent 70%),
+    radial-gradient(60% 80% at 80% 10%, rgba(124, 77, 255, 0.12), transparent 70%);
 }
 
 h1, h2, h3 {
